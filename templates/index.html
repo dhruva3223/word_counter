@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="centered">
+    <h1>Word Counter</h1>
+    <form method="POST" action="counter">
+        {% csrf_token %}
+      <textarea name="text" id="myTextarea" rows="10" 
+      placeholder="Type here..." maxlength="1000"></textarea><br>
+      <input type="submit"/>
+    </form>
+  </div>
+</body>
+</html>
